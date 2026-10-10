@@ -1,7 +1,7 @@
 {
   "id": "calendar-month",
   "name": "Monatskalender",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wochenraster im Stil der iOS-Kalender-App: durchgehende Balken für mehrtägige Termine, Chips, Kalenderwochen, heutiger Tag markiert",
   "author": "Gyrosguenter",
   "license": "MIT",

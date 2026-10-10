@@ -157,7 +157,7 @@ export default function CalendarMonthPlugin({ config, style }: PluginComponentPr
             )}
             <div
               style={{
-                gridColumn: 2,
+                gridColumn: '2 / -1',
                 display: 'grid',
                 gridTemplateColumns: 'repeat(7, minmax(0, 1fr))',
                 gridTemplateRows: `auto repeat(${maxLanes}, minmax(0, 1.5em)) auto`,
