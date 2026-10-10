@@ -1,0 +1,77 @@
+{
+  "id": "calendar-month",
+  "name": "Monatskalender",
+  "version": "0.1.0",
+  "description": "Wochenraster im Stil der iOS-Kalender-App: durchgehende Balken für mehrtägige Termine, Chips, Kalenderwochen, heutiger Tag markiert",
+  "author": "Gyrosguenter",
+  "license": "MIT",
+  "minAppVersion": "1.0.0",
+  "moduleType": "calendar-month",
+  "category": "Time & Date",
+  "icon": "Calendar",
+
+  "defaultConfig": {
+    "weeksToShow": 5,
+    "maxLanes": 4,
+    "showWeekNumbers": true,
+    "refreshIntervalMs": 300000
+  },
+
+  "defaultSize": { "w": 800, "h": 1000 },
+
+  "defaultStyle": {
+    "padding": 20,
+    "fontSize": 22,
+    "backgroundColor": "rgba(0, 0, 0, 0.4)"
+  },
+
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "weeksToShow": {
+        "type": "number",
+        "title": "Wochen",
+        "description": "Wie viele Wochen ab der aktuellen angezeigt werden.",
+        "minimum": 2,
+        "maximum": 6,
+        "ui:widget": "slider",
+        "ui:step": 1,
+        "ui:group": "Anzeige"
+      },
+      "maxLanes": {
+        "type": "number",
+        "title": "Termine je Tag",
+        "description": "Zeilen für Termine pro Woche. Was darüber hinausgeht, erscheint als \"+N\".",
+        "minimum": 1,
+        "maximum": 8,
+        "ui:widget": "slider",
+        "ui:step": 1,
+        "ui:group": "Anzeige"
+      },
+      "showWeekNumbers": {
+        "type": "boolean",
+        "title": "Kalenderwochen zeigen",
+        "ui:widget": "toggle",
+        "ui:group": "Anzeige"
+      },
+      "refreshIntervalMs": {
+        "type": "number",
+        "title": "Aktualisierung (ms)",
+        "minimum": 60000,
+        "maximum": 1800000,
+        "ui:widget": "slider",
+        "ui:step": 60000,
+        "ui:group": "Anzeige"
+      }
+    }
+  },
+
+  "exports": {
+    "component": "default"
+  },
+
+  "dataRequirements": [],
+  "prefetchUrl": null,
+  "permissions": ["network"],
+  "allowedDomains": []
+}
